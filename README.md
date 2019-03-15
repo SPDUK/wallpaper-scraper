@@ -1,1 +1,3 @@
 # wallpaper-scraper
+
+`bundle install`
