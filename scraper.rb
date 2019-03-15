@@ -7,6 +7,7 @@ require "mechanize"
 require "cgi"
 
 # used to avoid repeat images
+File.write("history.json", {}.to_json) unless File.file?("history.json")
 $history = JSON.parse(File.read("history.json"))
 
 $config = JSON.parse(File.read("config.json"))
@@ -49,6 +50,6 @@ end
 def setup_folder
   FileUtils.mkdir_p($save_path) unless File.directory?($save_path)
 end
-setup_folder
 
+setup_folder
 search("space")
