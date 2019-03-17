@@ -1,3 +1,7 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'mechanize', '~> 2.7', '>= 2.7.5'
+source "https://rubygems.org"
+
+gem "mechanize", "~> 2.7", ">= 2.7.5"
+gem "tty-spinner"
+gem "tty-prompt"
