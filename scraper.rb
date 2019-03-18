@@ -85,7 +85,7 @@ setup_folder()
 search(query, categories, nsfw, ratios, atleast, pages)
 
 
-# open the folder when done
+# if more than 1 image was saved ask if they want to set it as a wallpaper
 files = Dir["#{$save_path}#{query}/*"]
 if files.length > 0
   spinner.success("Done! #{files.length} Files saved in file://#{$save_path}#{query}")
