@@ -89,6 +89,7 @@ search(query, categories, nsfw, ratios, atleast, pages)
 files = Dir["#{$save_path}#{query}/*"]
 if files.length > 0
   spinner.success("Done! #{files.length} Files saved in file://#{$save_path}#{query}")
+  prompt.error("Warning: this feature only works on a GNOME based desktop environment!")
   if prompt.yes?("Would you like to set a background using one of the images you just downloaded?")
     `gsettings set org.gnome.desktop.background picture-uri file://#{files.sample}`
   end
